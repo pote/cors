@@ -299,7 +299,6 @@ func (c *Cors) handleActualRequest(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == "OPTIONS" {
 		c.logf("  Actual request no headers added: method == %s", r.Method)
-		return
 	}
 	// Always set Vary, see https://github.com/rs/cors/issues/10
 	headers.Add("Vary", "Origin")
